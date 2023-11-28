@@ -1,5 +1,17 @@
-//3. Person class to hold all details.
+//1.Class - Movie
 
+
+
+
+
+
+
+
+
+
+
+
+//3. Person class to hold all details.
 class person {
     constructor(name,age, gender,qualification, designation){
         this.name = name;
