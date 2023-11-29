@@ -7,7 +7,7 @@ class Movie {
     this.rating = rating;
   }
 }
-const exampleMovie = new Movie("The Matrix", "Warner Bros.", "R");
+var exampleMovie = new Movie("The Matrix", "Warner Bros.", "R");
 console.log(exampleMovie.title); // Output: The Matrix
 console.log(exampleMovie.studio); // Output: Warner Bros.
 console.log(exampleMovie.rating); // Output: R
@@ -38,12 +38,12 @@ class Movie {
 }
 function getPG(movies) {
   // Filter movies with a rating of "PG"
-  const pgMovies = movies.filter(movie => movie.rating === "PG");
+  var pgMovies = movies.filter(movie => movie.rating === "PG");
   
   return pgMovies;
 }
 // Example usage:
-const movies = [
+var movies = [
   new Movie("Movie1", "Studio1", "PG"),
   new Movie("Movie2", "Studio2", "R"),
   new Movie("Movie3", "Studio3", "PG"),
@@ -63,7 +63,7 @@ class Movie {
 }
 
 // Create an instance of the Movie class
-const casinoRoyale = new Movie("Casino Royale", "Eon Productions", "PG-13");
+var casinoRoyale = new Movie("Casino Royale", "Eon Productions", "PG-13");
 
 // Print or use the instance as needed
 console.log(casinoRoyale);
@@ -95,3 +95,51 @@ class person {
 }
 var p1 = new person("Sneha harigharun.", 22, "Female.", "Diploma in printing technology.", "Full stack developer.");
 console.log(p1.getname(), p1.getage(), p1.getgender(), p1.getqualification(), p1.getdesignation());
+
+//4) Class to calculate uber price 
+class UberRide {
+  constructor(distance, duration, surgeMultiplier = 1) {
+    this.distance = distance; // in miles
+    this.duration = duration; // in minutes
+    this.surgeMultiplier = surgeMultiplier; // surge pricing multiplier, default is 1
+  }
+
+  calculateBaseFare() {
+    var baseFare = 2.50;
+    return baseFare;
+  }
+
+  calculateDistanceFare() {
+    var farePerMile = 1.50;
+    return this.distance * farePerMile;
+  }
+
+  calculateTimeFare() {
+    var farePerMinute = 0.20;
+    return this.duration * farePerMinute;
+  }
+
+  calculateSurgeFare() {
+    return this.surgeMultiplier > 1 ? `Surge pricing: ${this.surgeMultiplier}x` : 'No surge pricing';
+  }
+
+  calculateTotalFare() {
+    var baseFare = this.calculateBaseFare();
+    var distanceFare = this.calculateDistanceFare();
+    var timeFare = this.calculateTimeFare();
+    var surgeFare = this.calculateSurgeFare();
+
+    // Total fare calculation
+    const totalFare = baseFare + distanceFare + timeFare;
+
+    return {
+      baseFare,
+      distanceFare,
+      timeFare,
+      surgeFare,
+      totalFare
+    };
+  }
+}
+
+
