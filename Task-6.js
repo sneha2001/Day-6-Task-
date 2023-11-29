@@ -1,4 +1,33 @@
 //1.Class - Movie
+//a) 
+class Movie {
+  constructor(title, studio, rating) {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+}
+const exampleMovie = new Movie("The Matrix", "Warner Bros.", "R");
+console.log(exampleMovie.title); // Output: The Matrix
+console.log(exampleMovie.studio); // Output: Warner Bros.
+console.log(exampleMovie.rating); // Output: R
+//b)
+class Movie {
+  constructor(title, studio, rating = "PG") {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+}
+var movie1 = new Movie("Inception", "Warner Bros");
+console.log(movie1.title); // Output: Inception
+console.log(movie1.studio); // Output: Warner Bros
+console.log(movie1.rating); // Output: PG
+
+var movie2 = new Movie("The Dark Knight", "Warner Bros", "PG-13");
+console.log(movie2.title); // Output: The Dark Knight
+console.log(movie2.studio); // Output: Warner Bros
+console.log(movie2.rating); // Output: PG-13
 
 
 
