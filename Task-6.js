@@ -52,6 +52,21 @@ const movies = [
 
 const pgMovies = getPG(movies);
 console.log(pgMovies);
+//D)
+// Define the Movie class
+class Movie {
+  constructor(title, studio, rating) {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+}
+
+// Create an instance of the Movie class
+const casinoRoyale = new Movie("Casino Royale", "Eon Productions", "PG-13");
+
+// Print or use the instance as needed
+console.log(casinoRoyale);
 
 
 
