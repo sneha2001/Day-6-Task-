@@ -68,18 +68,6 @@ const casinoRoyale = new Movie("Casino Royale", "Eon Productions", "PG-13");
 // Print or use the instance as needed
 console.log(casinoRoyale);
 
-
-
-
-
-
-
-
-
-
-
-
-
 //3. Person class to hold all details.
 class person {
     constructor(name,age, gender,qualification, designation){
